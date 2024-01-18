@@ -139,6 +139,6 @@ a{
         position: absolute;
         padding-left: 3%;
         font-size: small;
-        padding-top: 1px;
+        padding-top: 0;
     }
 }
