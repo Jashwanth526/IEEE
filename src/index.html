@@ -48,19 +48,15 @@
                             Events
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <div class="dropdown" id="myDropdown">
-                            <div class="dropdown-btn" onclick="toggleDropdown()">Socities
-                                <div class="arrow-icon down"></div>
-                            </div>
-                            <div class="dropdown-content">
+                    <li class="nav-item" id="societiesDropdown">
+                        Socities<span class="dropdown-arrow">▼</span>
+                            <div class="dropdown-content" >
                               <a href="#">Signal processing Society</a>
                               <a href="#">Communication Society</a>
                               <a href="#">Photonics Society</a>
                               <a href="#">Circuit And System Society</a>
                               <a href="#">EMB Society</a>
                             </div>
-                          </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="">
@@ -114,7 +110,7 @@
                     </li>
                     <li>
                         <a target="_blank" href="https://www.google.com/maps/place/RNS+INSTITUTE+OF+TECHNOLOGY/@12.9021902,77.5160071,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae3fa7243af9c3:0x9bed6669a38d1c3!8m2!3d12.9021902!4d77.518582!16s%2Fm%2F07kddf8?entry=ttu">
-                            <div id="addr"><img id="pin-logo" src="https://i.imgur.com/pX5G7JE.png" alt="pin logo" height="11"> Institute of Technology,</div>
+                            <div id="addr"><img id="pin-logo" src="https://i.imgur.com/pX5G7JE.png" alt="pin logo" height="11"> RNS Institute of Technology,</div>
                             <div id="addr"> Dr. Vishnuvardhan Road R R</div>
                             <div id="addr"> Nagar Post Channasandra</div>
                             <div id="addr"> Bengaluru -560 098</div>
@@ -136,21 +132,27 @@
         crossorigin="anonymous">
     </script>
     <script>
-        function toggleDropdown() {
-        var dropdown = document.getElementById("myDropdown");
-        dropdown.classList.toggle("active");
-        var arrowIcon = document.querySelector('.arrow-icon');
-        arrowIcon.classList.toggle('down');
-        arrowIcon.classList.toggle('up');
+       document.addEventListener("DOMContentLoaded", function() {
+      var societiesDropdown = document.getElementById("societiesDropdown");
+      var dropdownContent = societiesDropdown.querySelector(".dropdown-content");
+      var dropdownArrow = societiesDropdown.querySelector(".dropdown-arrow");
+
+      societiesDropdown.addEventListener("click", function(event) {
+        if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+          dropdownContent.style.display = "block";
+          dropdownArrow.innerHTML = "▲";
+        } else {
+          dropdownContent.style.display = "none";
+          dropdownArrow.innerHTML = "▼";
         }
-        document.addEventListener("click", function(event) {
-        var dropdown = document.getElementById("myDropdown");
-        if (!event.target.closest(".dropdown") && dropdown.classList.contains("active")) {
-        dropdown.classList.remove("active");
-        var arrowIcon = document.querySelector('.arrow-icon');
-        arrowIcon.classList.remove('up');
-        arrowIcon.classList.add('down');
-      }
+      });
+
+      document.addEventListener("click", function(event) {
+        if (!event.target.closest("#societiesDropdown")) {
+          dropdownContent.style.display = "none";
+          dropdownArrow.innerHTML = "▼";
+        }
+      });
     });
     </script>
 </body>
