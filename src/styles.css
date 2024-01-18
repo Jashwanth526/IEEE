@@ -62,8 +62,6 @@ a{
     padding-right: 23px;
     padding-left: 10px;
   }
-
-  /* Style the button that will open the dropdown */
 .dropdown-btn {
     color: #f9f9f9;
     padding-top: 8px;
@@ -72,9 +70,7 @@ a{
     cursor: pointer;
     background-color: rgb(255, 171, 92);
   }
-
-  /* Style the dropdown content */
-  .dropdown-content {
+.dropdown-content {
     font-size: small;
     display: none;
     position: absolute;
@@ -83,46 +79,39 @@ a{
     z-index: 1;
     white-space: nowrap;
   }
-
-  /* Style the dropdown options */
-  .dropdown-content a {
+.dropdown-content a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: #000000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
-      margin-bottom: 1px; /* Add margin between items */
-  }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1px; 
+}
 
-  /* Change color on hover */
 .dropdown-content a:hover {
     background-color: #ff8513;
     color: #fff;
-  }
+}
 .dropdown-btn:hover{
     color: #000000;
 }
 
-  /* Show the dropdown content when the dropdown button is clicked */
-  .dropdown.active .dropdown-content {
+.dropdown.active .dropdown-content {
     display: block;
-  }
-   /* Style the arrow icon */
-   .arrow-icon {
+}
+.arrow-icon {
     font-size: small;
     position: absolute;
     padding-left: 3px;
     padding-top: 2px;
     display: inline-block;
-  }
+}
 
-  /* Style the down arrow icon */
-  .arrow-icon.down::before {
+.arrow-icon.down::before {
     content: "▼";
-  }
+}
 
-  /* Style the up arrow icon */
-  .arrow-icon.up::before {
+.arrow-icon.up::before {
     content: "▲";
   }
 @media (max-width: 768px) {
