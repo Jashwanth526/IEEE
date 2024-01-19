@@ -4,6 +4,7 @@
     margin-left: 28px;
 }
 .navbar{
+    display: flex;
     padding-top: 0%;
     padding-bottom: 0%;
     background-color: rgb(255, 171, 92);
