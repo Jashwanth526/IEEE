@@ -1,13 +1,17 @@
 
 #container{
     padding-left: 0%;
-    margin-left: 28px;
+    margin-left: 10px;
 }
 .navbar{
     display: flex;
     padding-top: 0%;
     padding-bottom: 0%;
     background-color: rgb(255, 171, 92);
+}
+.navbar-brand{
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .nav-item{
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
